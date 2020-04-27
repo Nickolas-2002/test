@@ -1,0 +1,29 @@
+<div class="container" >
+    <div class="sec-container">
+      <form class="form-group" >
+          <label for="name" [class.white]="svc.darkTeamOn === true">Введите ваше имя:</label>
+          <input type="text" id="name" placeholder="Your Name" class="form-control" style="padding:1%;" #name>
+          <br>
+          <label for="lastname" [class.white]="svc.darkTeamOn === true">Введите вашу фамилию:</label>
+          <br>
+          <input type="text" id="lastname" placeholder="Your LastName" class="form-control" style="padding:1%;" #lastname>
+          <br>
+          <label for="email" [class.white]="svc.darkTeamOn === true">Введите вашу почту:</label>
+          <br>
+          <input type="text" id="email" placeholder="Your Email" class="form-control" style="padding:1%;" #email>
+          <br>
+          <button type="submit" class="btn btn-outline-success" style="padding:1%;">Registration</button>
+      </form>
+      <!-- <ul>
+          <li *ngFor="let user of users">
+              {{user}}
+              {{lastname}}
+              {{email}}
+          </li>
+      </ul> -->
+  </div>
+  
+</div>
+<!-- (submit)="addUser(name.value, lastname.value, email.value)" -->
+
+

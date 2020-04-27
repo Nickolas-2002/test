@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="block-description" [class.red]="svc.darkTeamOn === true">
+        <div class="info" [class.dark]="svc.darkTeamOn === true">
+            You can give tips on promoting the store or make an advantageous offer. Constructive criticism is welcome
+        </div>
+        <div class="connection" [class.dark]="svc.darkTeamOn === true">You can contact us by this number
+            <button type="button" *ngIf="!phoneNum" (click)="showPhone()">Show</button>
+            <button type="button" *ngIf="phoneNum" (click)="showPhone()">Hide</button>
+        </div>
+        <div class="phone-number" *ngIf="phoneNum" [class.dark]="svc.darkTeamOn === true">
+            <div class="left-block">
+            <img [src]="svc.phone" style="width:30px;height:30px;margin-right:1%;">+79992027550
+        </div>
+        <div class="right-block">
+            <img [src]="svc.gmail" style="width:30px;height:30px;margin-right:2%;;">Statesman@gmail.com
+        </div>
+        </div>
+        <div class="big-block-info">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta ad illum sapiente earum eligendi, dolorum dolore, quaerat numquam vitae maiores velit modi, animi ut 
+            veritatis quam odit nihil totam. Corporis, magni magnam. Perspiciatis alias sapiente nulla, architecto corrupti voluptatum tenetur?Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Adipisci eaque labore illum, natus magnam qui voluptatum consequatur ad perspiciatis possimus.<br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem optio asperiores maiores voluptatibus corporis dignissimos est dolor labore vitae, 
+            aliquid odit facilis, ratione quasi eveniet harum mollitia voluptas. Eaque, eveniet?
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem optio asperiores maiores voluptatibus corporis dignissimos est dolor labore vitae, 
+            aliquid odit facilis, ratione quasi eveniet harum mollitia voluptas. Eaque, eveniet?
+        </div>
+        <div class="advice" [class.dark]="svc.darkTeamOn === true">
+            You can leave feedback about our service and the services it provides.
+        </div>
+    </div>
+    <div class="feedback-block" [class.red]="svc.darkTeamOn === true">
+        <form (submit)="addOpt(input.value); input.value = ''">
+            <div class="form-group" [class.red]="svc.darkTeamOn === true">
+                <label for="option">Leave a comment</label>
+                     <div class="input-block">
+                        <input type="text" id="option" class="form-control" placeholder="Enter something" #input>
+                        <button type="submit" class="btn btn-outline-success" style="padding:0% 10% 0% 10%; background:red;color:white;border:1px solid red;">Done</button>
+                    </div>
+                   
+            </div>
+            <div class="comments" *ngFor="let comment of comments" [class.red]="svc.darkTeamOn === true" style="border:1px solid grey;">
+                <div class="top-block"> 
+                    <label class="user-name">Anonim user</label>
+                    <button type="button" id="delButton" class="btn btn-danger" style="height:40px;" (click)="delOpt(comment)">Delete</button>
+                </div>
+                <div class="comment-message">{{comment}}</div>
+            </div>
+        </form>
+    </div>
+</div>

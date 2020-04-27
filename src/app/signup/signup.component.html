@@ -1,0 +1,29 @@
+<div class="container">
+    <!-- <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal" routerLink="/">StatesMan</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">Features</a>
+        <a class="p-2 text-dark" href="#">Enterprise</a>
+        <a class="p-2 text-dark" href="#">Support</a>
+        <a class="p-2 text-dark" href="#">Pricing</a>
+        </nav>
+        <a class="btn btn-outline-primary" style="margin-right:1%;" routerLink="/registration">Registration</a>
+        <a class="btn btn-outline-primary" routerLink="signup" style="margin-right:1%;
+        background:#007bff; color:#efffff;" routerLink="/signup">Sign up</a>
+    </div> -->
+
+    <div class="sec-container">
+        <form class="form-group">
+            <label for="name" [class.white]="svc.darkTeamOn === true">Введите ваше имя:</label>
+            <input type="text" id="name" placeholder="Your Name" class="form-control" style="padding:1%;" #name>
+            <br>
+            <label for="email" [class.white]="svc.darkTeamOn === true">Введите вашу почту:</label>
+            <br>
+            <input type="text" id="email" placeholder="Your Email" class="form-control" style="padding:1%;" #email>
+            <br>
+            <button type="submit" class="btn btn-outline-success" style="padding:1%;">Sign Up</button>
+        </form>
+    
+    </div>
+</div>
+

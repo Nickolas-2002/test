@@ -1,0 +1,35 @@
+<div class="container">
+
+<div class="no-product"  *ngIf="svc.index">
+  <h2>
+    Shopping cart is empty...
+  </h2>
+</div>
+
+<div *ngFor="let product of svc.descriptionAll">
+    <!-- {{product.name}}<br>
+    {{product.text}}<br>
+    {{product.price}}<br> -->
+    <div class="card mb-4 shadow-sm" [class.red]="svc.darkTeamOn === true">
+        <div class="card-header">
+          <div class="block-left">
+                <h4 class="my-0 font-weight-normal"> {{product.name}}</h4>
+          </div>
+          <div class="block-right">
+                <button type="button" (click)="svc.deleteProduct(product)" class="button-delete">Delete</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">${{product.price}} <small class="text-muted">/ mo</small></h1>
+          <br>
+          <img [src]="svc.firstImage">
+          <div><br></div>
+          <div class="quantity">Quantity: <strong>{{product.quantity}}</strong></div>
+          <br>
+          <div>{{product.text}}</div>
+          <br>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+        </div>
+      </div>
+    </div>
+</div>

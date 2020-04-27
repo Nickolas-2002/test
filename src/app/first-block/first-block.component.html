@@ -1,0 +1,184 @@
+<!--  -->
+
+
+    <div class="container">
+    
+        <div class="big-block"  *ngIf=svc.bool>
+          <div class="btn-hidden">
+          <button type="button" class="btn btn-danger" id="close" (click)="svc.showInfo('Wisckey')">Закрыть</button>
+        </div>
+          <h2>{{svc.description.name}}</h2>
+          <br>
+          <p>{{svc.description.text}}</p>
+          <strong>{{svc.description.price}}$</strong>
+          <button type="button" class="btn btn-danger pos" (click)="svc.addProduct(svc.description)">Add to Cart</button>
+        </div>
+         
+        <!-- <li class="card-deck mb-3 text-center"> -->
+          <ul >
+        <div class="card-deck mb-3 text-center">
+          <div class="card mb-4 shadow-sm" [class.red]="svc.darkTeamOn === true">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Jack Daniels</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$3000 <small class="text-muted">/ mo</small></h1>
+              <img [src]="svc.firstImage">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Company: Brown Foreman</li>
+                <li>Place of foundation: Lynchburg</li>
+                <li>Country of Origin: USA</li>
+                <li>Parent company: Brown-Forman</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="svc.showInfo('jack')">More</button>
+            </div>
+          </div>
+        
+        
+        
+          <div class="card mb-4 shadow-sm" [class.red]="svc.darkTeamOn === true">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Johnnie Walker</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$3500 <small class="text-muted">/ mo</small></h1>
+              <img [src]="svc.firstImage">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Company: Brown Foreman</li>
+                <li>Place of foundation: Lynchburg</li>
+                <li>Country of Origin: USA</li>
+                <li>Parent company: Brown-Forman</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="svc.showInfo('john')">More</button>
+            </div>
+          </div>
+
+          <div class="card mb-4 shadow-sm" [class.red]="svc.darkTeamOn === true">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Black and White</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$5500 <small class="text-muted">/ mo</small></h1>
+              <img [src]="svc.firstImage">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Company: Brown Foreman</li>
+                <li>Place of foundation: Lynchburg</li>
+                <li>Country of Origin: USA</li>
+                <li>Parent company: Brown-Forman</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="svc.showInfo('black')">More</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-deck mb-3 text-center">
+          <div class="card mb-4 shadow-sm" [class.red]="svc.darkTeamOn === true">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Jack Daniels</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$3000 <small class="text-muted">/ mo</small></h1>
+              <img [src]="svc.firstImage">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Company: Brown Foreman</li>
+                <li>Place of foundation: Lynchburg</li>
+                <li>Country of Origin: USA</li>
+                <li>Parent company: Brown-Forman</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="svc.showInfo('jack')">More</button>
+            </div>
+          </div>
+        
+        
+        
+          <div class="card mb-4 shadow-sm" [class.red]="svc.darkTeamOn === true">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Johnnie Walker</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$3500 <small class="text-muted">/ mo</small></h1>
+              <img [src]="svc.firstImage">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Company: Brown Foreman</li>
+                <li>Place of foundation: Lynchburg</li>
+                <li>Country of Origin: USA</li>
+                <li>Parent company: Brown-Forman</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="svc.showInfo('john')">More</button>
+            </div>
+          </div>
+          <div class="card mb-4 shadow-sm" [class.red]="svc.darkTeamOn === true">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Black and White</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$5500 <small class="text-muted">/ mo</small></h1>
+              <img [src]="svc.firstImage">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Company: Brown Foreman</li>
+                <li>Place of foundation: Lynchburg</li>
+                <li>Country of Origin: USA</li>
+                <li>Parent company: Brown-Forman</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="svc.showInfo('black')">More</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-deck mb-3 text-center">
+          <div class="card mb-4 shadow-sm" [class.red]="svc.darkTeamOn === true">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Jack Daniels</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$3000 <small class="text-muted">/ mo</small></h1>
+              <img [src]="svc.firstImage">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Company: Brown Foreman</li>
+                <li>Place of foundation: Lynchburg</li>
+                <li>Country of Origin: USA</li>
+                <li>Parent company: Brown-Forman</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="svc.showInfo('jack')">More</button>
+            </div>
+          </div>
+        
+      
+        
+          <div class="card mb-4 shadow-sm" [class.red]="svc.darkTeamOn === true">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Johnnie Walker</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$3500 <small class="text-muted">/ mo</small></h1>
+              <img [src]="svc.firstImage">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Company: Brown Foreman</li>
+                <li>Place of foundation: Lynchburg</li>
+                <li>Country of Origin: USA</li>
+                <li>Parent company: Brown-Forman</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="svc.showInfo('john')">More</button>
+            </div>
+          </div>
+          <div class="card mb-4 shadow-sm" [class.red]="svc.darkTeamOn === true">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-normal">Black and White</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$5500 <small class="text-muted">/ mo</small></h1>
+              <img [src]="svc.firstImage">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Company: Brown Foreman</li>
+                <li>Place of foundation: Lynchburg</li>
+                <li>Country of Origin: USA</li>
+                <li>Parent company: Brown-Forman</li>
+              </ul>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="svc.showInfo('black')">More</button>
+            </div>
+          </div>
+        </div>
+      </ul>
+      </div>
+       
+  
